@@ -9,6 +9,7 @@ const cityData = document.getElementById("city");
 
 const formEl = document.querySelector("form")
 
+
 formEl.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -39,8 +40,8 @@ async function getWeatherData(cityValue){
 
         const details = [
             `feels like: ${Math.round(data.main.feels_like)}`,
-            `Humidity: ${data.main.humidity}`,
-            `Wind Speed: ${data.wind.speed}`,
+            `Humidity: ${data.main.humidity}%`,
+            `Wind Speed: ${data.wind.speed}m/s`,
         ]
 
         weatherDataEl.querySelector(
@@ -48,10 +49,24 @@ async function getWeatherData(cityValue){
         ).innerHTML = `<img src="http://openweathermap.org/img/wn/${icon}.png" alt="weather icon">`;    
     
         weatherDataEl.querySelector(
-            "temperature").textContent = `${temperature}°C`;
+            ".temperature").textContent = `${temperature}°C`;
 
+            weatherDataEl.querySelector(".description").textContent = `${description}`;
+
+            weatherDataEl.querySelector(".details").innerHTML = details.map((details) => `<div>${details}</div>`).join("");
+            
     } catch (error) {
         // function (!respons.ok)
-        console.log(error)
+        // console.log(error)
+        weatherDataEl.querySelector(
+            ".icon"
+        ).innerHTML = "";    
+    
+        weatherDataEl.querySelector(".temperature").textContent = "";
+
+        weatherDataEl.querySelector(".description").textContent = "";
+
+        weatherDataEl.querySelector(".details").innerHTML = "An Error Occured, Because City Not Found!";
+            
     }
 } 
