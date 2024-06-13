@@ -2,7 +2,7 @@
 const apiKey = "a5277a670215173962c7d3ae19ba1757";
 
 // secondly i have to call out my element i will work with on this project with 
-// the getElement and quereySelector method of th Dom methoths
+// the getElement and quereySelector method in Dom
 const weatherDataEl = document.getElementById("weather-data");
 
 const cityData = document.getElementById("city");
@@ -38,7 +38,7 @@ async function getWeatherData(cityValue){
         const icon = data.weather[0].icon
 
         const details = [
-            `feels like: ${math.round(data.main.feels_like)}`,
+            `feels like: ${Math.round(data.main.feels_like)}`,
             `Humidity: ${data.main.humidity}`,
             `Wind Speed: ${data.wind.speed}`,
         ]
@@ -52,5 +52,6 @@ async function getWeatherData(cityValue){
 
     } catch (error) {
         // function (!respons.ok)
+        console.log(error)
     }
 } 
