@@ -20,7 +20,10 @@ body{
     margin-top: 80px;
     text-align: center;
     padding-top: 30px;
+}
 
+.container h1{
+    font-size: 50px;
 }
 
 
@@ -73,7 +76,15 @@ body{
     
 }
 
-@media (max-width: 768px) {  
+@media (max-width: 768px) { 
+    .container{
+        background: none;
+        box-shadow: none;
+        border: none;
+        border-radius: none;
+      
+
+    } 
     form{
         flex-direction: column;
     }
@@ -82,8 +93,15 @@ body{
         margin-bottom: 30px;
         width: 100%;
     }
+    form input[type="submit"]{
+       font-size: 12px;
+    }
 
-    h1{
+    .container{
+        width: 50%;
+    }
+
+    .container h1{
         font-size:20px;
         padding-left: 10px;
         padding-right: 10px;
@@ -93,5 +111,13 @@ body{
         width: 100%;
     }
     
+    .descriptio{
+        font-size: 12px;
+    }
   
+    .temperature{
+        font-size: 40px;
+    }
+  
+   
 }
