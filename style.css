@@ -3,14 +3,26 @@
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-.container{
-    text-align: center;
-    background-image: url(/asset/Untitled-1.png);
+body{
+    background-image: url(./asset/bg.png.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
+
+.container{
+    background-image: url(/asset/Untitled-1.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    padding-top: 30px;
+
+}
+
 
 .icon{
     display: flex;
@@ -55,23 +67,24 @@
     padding-right: 8px;
     font-size: 14px;
     font-weight: bold;
-    background-color: #1E40AF;
+    background-color:#0f41a6;
     border-radius: 5px;
     height: 100px;
     
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {  
     form{
         flex-direction: column;
     }
 
     form input[type="text"]{
-        width: 100%;
         margin-bottom: 30px;
+        width: 100%;
     }
 
     h1{
+        font-size:20px;
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -79,4 +92,6 @@
     img{
         width: 100%;
     }
+    
+  
 }
