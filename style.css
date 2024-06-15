@@ -17,6 +17,8 @@ body{
     background-repeat: no-repeat;
     border-radius: 5px;
     text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .container h1{
@@ -45,8 +47,8 @@ form{
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     gap: 10px;
 }
 
@@ -70,6 +72,7 @@ form{
     color: white;
     margin: 30px 30px;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .details div{
