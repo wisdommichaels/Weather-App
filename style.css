@@ -96,7 +96,7 @@ form{
     right: 0;
     transform: translateY(-50%);
     white-space: nowrap;
-    animation: float-right-to-left 20s linear infinite;
+    animation: float-right-to-left 25s linear infinite;
 }
 
 @keyframes float-right-to-left {
