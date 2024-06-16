@@ -152,6 +152,10 @@ form{
     .descriptio{
         font-size: 10px;
     }
+
+    .details div{
+        padding: auto;
+    }
   
     .temperature{
         font-size: 40px;
